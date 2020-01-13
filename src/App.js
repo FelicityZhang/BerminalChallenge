@@ -45,7 +45,6 @@ class App extends Component {
           </div>
           <AuthProvider>
             <Switch>
-              {/* <Route exact path='/' render={ props => this.state.redirectToReferrer === true ? <Redirect to='/submit' email={ this.state.email } /> : <HomePage onFormSubmit={ this.handleEmailSubmit } /> } /> */ }
               <Route exact path='/' render={ props => <HomePage onFormSubmit={ this.handleEmailSubmit } sendEmail={ this.sendEmail } /> } />
               <Route path='/submit' render={ props => <SubmitPage { ...props } email={ this.state.email } /> } />
               <Route path='/comfirm' render={ props => <ComfirmPage /> } />
